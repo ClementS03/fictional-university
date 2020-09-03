@@ -54,8 +54,8 @@ function university_files()
         wp_enqueue_script('main-university-js', 'http://localhost:3000/bundled.js', NULL, '1.0', true);
     } else {
         wp_enqueue_script('our-vendors-js', get_theme_file_uri('/bundled-assets/vendors~scripts.9678b4003190d41dd438.js'), NULL, '1.0', true);
-        wp_enqueue_script('main-university-js', get_theme_file_uri('/bundled-assets/scripts.c19a0e39cd23d11c739b.js'), NULL, '1.0', true);
-        wp_enqueue_style('our-main-styles', get_theme_file_uri('/bundled-assets/styles.c19a0e39cd23d11c739b.css'));
+        wp_enqueue_script('main-university-js', get_theme_file_uri('/bundled-assets/scripts.eeb539cc88b9297d66b0.js'), NULL, '1.0', true);
+        wp_enqueue_style('our-main-styles', get_theme_file_uri('/bundled-assets/styles.eeb539cc88b9297d66b0.css'));
     };
 
     wp_localize_script('main-university-js', 'universityData', array(
@@ -117,10 +117,10 @@ function university_adjust_queries($query)
 
 add_action('pre_get_posts', 'university_adjust_queries');
 
-function universityMapKey($api)
-{
-    $api['key'] = 'AIzaSyD8yByxXS8qPTqzhyoJvtw7TpbIknvBkLI';
-    return $api;
-}
+// function universityMapKey($api)
+// {
+//     $api['key'] = '';
+//     return $api;
+// }
 
-add_filter('acf/fields/google_map/api', 'universityMapKey');
+// add_filter('acf/fields/google_map/api', 'universityMapKey');

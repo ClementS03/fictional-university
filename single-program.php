@@ -15,7 +15,7 @@ while (have_posts()) {
     </div>
 
     <div class="generic-content">
-      <?php the_content(); ?>
+      <?php the_field('main_body_content'); ?>
     </div>
 
     <?php
@@ -95,7 +95,7 @@ while (have_posts()) {
     if ($relatedCampuses) {
       echo '<hr class="section-break">';
       echo '<h2 class="headline headline--medium">' . get_the_title() . ' is available at these Campuses</h2>';
-    }
+   
 
 
     echo '<ul class="min-list link-list">';
@@ -104,9 +104,9 @@ while (have_posts()) {
       ?> <li><a href="<?php echo get_the_permalink($campus); ?>"><?php echo get_the_title($campus); ?></a></li> <?php  
     }
 
-    echo '</ul>'
+    echo '</ul>';
+  }
     ?>
-
 
   </div>
 
